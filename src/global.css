@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .header {
+    background-color: white;
+    opacity: 0.8;
+    background-image: 
+      radial-gradient(#2d6a4f 1px, transparent 0.75px), 
+      radial-gradient(#2d6a4f 1px, transparent 0.75px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px
+  }
+}
+
+@layer base {
+  html {
+    font-family: "Rubik", sans-serif;
+  }
+}
