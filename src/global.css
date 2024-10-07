@@ -7,17 +7,63 @@
 @layer components{
   .header {
     background-color: white;
-    opacity: 0.8;
     background-image: 
-      radial-gradient(#2d6a4f 1px, transparent 0.75px), 
-      radial-gradient(#2d6a4f 1px, transparent 0.75px);
-    background-size: 40px 40px;
-    background-position: 0 0, 20px 20px
+      radial-gradient(rgba(32, 129, 85, 0.507) 1px, transparent 0.75px), 
+      radial-gradient(rgba(32, 129, 85, 0.507) 1px, transparent 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+
+  .menuBtn {
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .menuIcon, .menuIcon::before, .menuIcon::after {
+    background-color: black;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+
+  .menuIcon::before, .menuIcon:after {
+    content: "";
+    width: 30px;
+    height: 3px;
+  }
+
+  .menuIcon::before {
+    transform: translate(0, -8px)
+  }
+  
+  .menuIcon::after {
+    transform: translate(0, 8px)
+  }
+
+  :is(.active) .menuIcon {
+    background-color: transparent;
+  }
+
+  :is(.active) .menuIcon::before {
+    transform: rotate(45deg);
+  }
+
+  :is(.active) .menuIcon::after {
+    transform: rotate(-45deg);
   }
 }
 
 @layer base {
   html {
     font-family: "Rubik", sans-serif;
+    background-color: rgb(240, 240, 240);
   }
 }
