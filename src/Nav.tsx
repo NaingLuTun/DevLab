@@ -16,16 +16,18 @@ const Nav = () => {
         <div className="flex items-center logoAndLinksContainer">
 
             <div className="relative menuContainer">
-              <span onClick={handleMenuClick} className={`${menuActive? "active":""} menuBtn`}>
+              <span onClick={handleMenuClick} className={`${menuActive? "active":""} hover:cursor-pointer menuBtn`}>
                 <span className=" menuIcon"></span>
               </span>
 
               {menuActive && 
-              <div className="absolute bg-white flex flex-col top-[50px] left-[10px] border-black border-[2px] rounded-xl p-2 menuListContainer">
-                <span className="pt-3 pb-1 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">Home</span>
-                <span className="pt-1 pb-1 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">Courses</span>
-                <span className="pt-1 pb-1 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">About</span>
-                <span className="pt-1 pb-3 pl-3 pr-[40px] font-[600] text-nowrap hover:text-[#1894c9]">Contact Us</span>
+              <div className="absolute bg-white flex flex-col top-[50px] left-[10px] border-black border-[2px] rounded-xl p-2 z-20 menuListContainer">
+                <span className="pt-3 pb-2 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">Home</span>
+                <span className="pt-2 pb-2 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">Courses</span>
+                <span className="pt-2 pb-2 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">Articles</span>
+                <span className="pt-2 pb-2 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">Podcasts</span>
+                <span className="pt-2 pb-2 pl-3 pr-[40px] border-b border-slate-400 font-[600] text-nowrap hover:text-[#1894c9]">About</span>
+                <span className="pt-2 pb-3 pl-3 pr-[40px] font-[600] text-nowrap hover:text-[#1894c9]">Contact Us</span>
               </div>}
             </div>
             

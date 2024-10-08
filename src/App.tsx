@@ -1,5 +1,6 @@
 import Header from "./Header"
 import Nav from "./Nav"
+import PopularCourses from "./PopularCourses"
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Nav />
       <Header />
+      <PopularCourses />
     </>
   )
 }
