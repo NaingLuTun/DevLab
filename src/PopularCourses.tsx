@@ -24,13 +24,13 @@ const PopularCourses = () => {
     ]
 
     return (
-        <div className="p-5 pt-[70px] pb-[70px] popularCoursesBody">
-            <h2 className="text-[20px] font-[700]">Popular Courses</h2>
-            <div className="grid grid-cols-2 p-5 gap-6 lg:grid-cols-3 popularCoursesContainer">
+        <section className="p-5 pt-[70px] popularCoursesBody">
+            <h2 className="text-[20px] font-[700] text-nowrap mb-3 lg:text-[26px]">Popular Courses</h2>
+            <div className="grid grid-cols-2 p-3 gap-4 md:gap-5 md:p-5 lg:grid-cols-3 popularCoursesContainer">
                 {courseLogoAndHeader.map((course, index) => (
                     <div key={index} className="flex flex-col gap-1 individualCourseContainer">
                         
-                            <div className="p-3 rounded-2xl bg-white flex flex-col gap-2 lg:flex-row hover:cursor-pointer courseInfoContainer">
+                            <div className="p-3 rounded-2xl bg-white flex flex-col gap-2 shadow-normal lg:flex-row hover:cursor-pointer courseInfoContainer">
 
                                 <div className="p-3 w-full rounded-2xl lg:w-[100px] lg:h-fit courseImgContainer" style={{backgroundColor: course.mainBgColor}}>
                                     <img src={course.logo} alt="course" className="w-full"/>
@@ -38,29 +38,29 @@ const PopularCourses = () => {
 
                                 <div className="flex-grow courseInfoContainer">
                                         
-                                    <h3  className="text-[18px] font-[700] pb-2">{course.header}</h3>
+                                    <h3  className="text-[16px] font-[700] md:text-[18px] pb-2">{course.header}</h3>
                                         
-                                    <p className="text-[14px] opacity-50 info">Author: Francis Chad</p>
-                                    <p className="text-[14px] opacity-50 info">Duration: +13h</p>
-                                    <p className="text-[14px] opacity-50 info">Lifetime Support</p>
+                                    <p className="text-[14px] opacity-60 2xl:text-[16px] info">Author: Francis Chad</p>
+                                    <p className="text-[14px] opacity-60 2xl:text-[16px] info">Duration: +13h</p>
+                                    <p className="text-[14px] opacity-60 2xl:text-[16px] info">Lifetime Support</p>
                                 </div>
                                     
                             </div>
                                 
 
-                            <div className="p-3 rounded-2xl lg:flex lg:justify-between bg-white text-center coursePriceContainer">
+                            <div className="p-3 rounded-2xl shadow-normal lg:flex lg:justify-between bg-white text-center coursePriceContainer">
                                 <div className="priceContainer">
-                                    <h3 className="text-[18px] font-[700] price">Price: 80$</h3>
-                                    <p className="text-[14px] opacity-50 line-through oldPrice">Old Price: 100$</p>
+                                    <h3 className="text-[16px] font-[700] md:text-[18px] price">Price: 80$</h3>
+                                    <p className="text-[14px] opacity-60 line-through oldPrice">Old Price: 100$</p>
                                 </div>
 
-                                <button className="text-[14px] font-[700] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
+                                <button className="text-[14px] font-[700] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
                             </div> 
                     </div>
                     
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

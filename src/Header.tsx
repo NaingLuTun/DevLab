@@ -4,10 +4,10 @@ const Header = () => {
   return (
     <div className="p-5 pt-[70px] pb-[70px] flex flex-col items-center justify-center header">
         <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Learn Coding Anywhere With <span className="text-[#1894c9] webName">DevLab</span></h2>
-        <p className="subHeader">Learn Programming With Coach And Mentor!</p>
+        <p className="text-[#1f307c] 2xl:text-[18px] subHeader">Learn Programming With Coach And Mentor!</p>
         
         <div className="pt-[30px] pb-[30px] flex gap-3 headerBtnContainer"> 
-          <button className="p-2 w-[130px] text-white bg-[rgb(24,148,201)] rounded-lg hover:shadow-lg seeCoursesBtn headerBtn">See Courses</button>
+          <button className="p-2 w-[130px] text-white bg-[#178fca] rounded-lg hover:shadow-lg seeCoursesBtn headerBtn">See Courses</button>
           <button className="p-2 w-[130px] text-white bg-black rounded-lg hover:shadow-lg aboutBtn headerBtn">About Us</button>
         </div>
 
