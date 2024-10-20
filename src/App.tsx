@@ -1,7 +1,8 @@
-import Comments from "./Comments"
-import Header from "./Header"
-import Nav from "./Nav"
-import PopularCourses from "./PopularCourses"
+import Comments from "./components/Comments"
+import Header from "./components/Header"
+import Nav from "./components/Nav"
+import Podcasts from "./components/Podcasts"
+import PopularCourses from "./components/PopularCourses"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <PopularCourses />
       <Comments />
+      <Podcasts />
     </>
   )
 }

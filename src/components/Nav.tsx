@@ -1,6 +1,6 @@
-import mainLogo from "./assets/dev-lab-logo.png"
-import supportIcon from "./assets/support-icon.svg"
-import userIcon from "./assets/user-icon.svg"
+import mainLogo from "../assets/dev-lab-logo.png"
+import supportIcon from "../assets/support-icon.svg"
+import userIcon from "../assets/user-icon.svg"
 
 import { useState } from "react"
 

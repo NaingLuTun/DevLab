@@ -1,10 +1,10 @@
 
-import reactLogo from "./assets/react-logo.svg"
-import bootstrapLogo from "./assets/bootstrap-logo.svg"
-import javascriptLogo from "./assets/javascript-logo.svg"
-import responsiveDesignLogo from "./assets/responsive-design-logo.png"
-import phpLogo from "./assets/php-logo.svg"
-import nodejsLogo from "./assets/nodejs-logo.svg"
+import reactLogo from "../assets/react-logo.svg"
+import bootstrapLogo from "../assets/bootstrap-logo.svg"
+import javascriptLogo from "../assets/javascript-logo.svg"
+import responsiveDesignLogo from "../assets/responsive-design-logo.png"
+import phpLogo from "../assets/php-logo.svg"
+import nodejsLogo from "../assets/nodejs-logo.svg"
 
 interface courseLogoAndHeaderType {
     logo: string,
@@ -24,8 +24,12 @@ const PopularCourses = () => {
     ]
 
     return (
-        <section className="p-5 pt-[70px] popularCoursesBody">
-            <h2 className="text-[20px] font-[700] text-nowrap mb-3 lg:text-[26px]">Popular Courses</h2>
+        <section className="p-5 pt-[70px] pb-[70px] popularCoursesSection">
+            <div className="flex justify-between items-center w-full mb-3 popularCoursesHeaderContainer">
+                <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Popular Courses</h2>
+                <button className="seeAllBtn">See all {">"}</button>
+            </div>
+            
             <div className="grid grid-cols-2 p-3 gap-4 md:gap-5 md:p-5 lg:grid-cols-3 popularCoursesContainer">
                 {courseLogoAndHeader.map((course, index) => (
                     <div key={index} className="flex flex-col gap-1 individualCourseContainer">
@@ -51,7 +55,7 @@ const PopularCourses = () => {
                             <div className="p-3 rounded-2xl shadow-normal lg:flex lg:justify-between bg-white text-center coursePriceContainer">
                                 <div className="priceContainer">
                                     <h3 className="text-[16px] font-[700] md:text-[18px] price">Price: 80$</h3>
-                                    <p className="text-[14px] opacity-60 line-through oldPrice">Old Price: 100$</p>
+                                    <p className="text-[14px] opacity-60 line-through 2xl:text-[16px] oldPrice">Old Price: 100$</p>
                                 </div>
 
                                 <button className="text-[14px] font-[700] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>

@@ -1,9 +1,9 @@
-import commentImg1 from "./assets/comment-img-1.svg"
-import commentImg2 from "./assets/comment-img-2.svg"
-import commentImg3 from "./assets/comment-img-3.svg"
-import commentImg4 from "./assets/comment-img-4.svg"
-import commentImg5 from "./assets/comment-img-5.svg"
-import commentImg6 from "./assets/comment-img-6.svg"
+import commentImg1 from "../assets/comment-img-1.svg"
+import commentImg2 from "../assets/comment-img-2.svg"
+import commentImg3 from "../assets/comment-img-3.svg"
+import commentImg4 from "../assets/comment-img-4.svg"
+import commentImg5 from "../assets/comment-img-5.svg"
+import commentImg6 from "../assets/comment-img-6.svg"
 
 interface commentsType {
     image: string,
@@ -21,7 +21,7 @@ const Comments = () => {
     ]
 
   return (
-    <section className="p-5 pt-[70px] bg-white commentSection">
+    <section className="p-5 pt-[70px] pb-[70px] bg-white commentSection">
         <h2 className="text-[20px] font-[700] text-nowrap mb-3 lg:text-[26px] commentSectionHeader">Students Comments</h2>
 
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center commentsBody">
