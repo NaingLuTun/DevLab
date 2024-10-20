@@ -24,7 +24,7 @@ const PopularCourses = () => {
     ]
 
     return (
-        <section className="p-5 pt-[70px] pb-[70px] popularCoursesSection">
+        <section className="p-5 pt-[70px] pb-[70px] lg:p-10 popularCoursesSection">
             <div className="flex justify-between items-center w-full mb-3 popularCoursesHeaderContainer">
                 <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Popular Courses</h2>
                 <button className="seeAllBtn">See all {">"}</button>
@@ -32,7 +32,7 @@ const PopularCourses = () => {
             
             <div className="grid grid-cols-2 p-3 gap-4 md:gap-5 md:p-5 lg:grid-cols-3 popularCoursesContainer">
                 {courseLogoAndHeader.map((course, index) => (
-                    <div key={index} className="flex flex-col gap-1 individualCourseContainer">
+                    <div key={index} className="flex flex-col gap-2 individualCourseContainer">
                         
                             <div className="p-3 rounded-2xl bg-white flex flex-col gap-2 shadow-normal lg:flex-row hover:cursor-pointer courseInfoContainer">
 
@@ -58,7 +58,7 @@ const PopularCourses = () => {
                                     <p className="text-[14px] opacity-60 line-through 2xl:text-[16px] oldPrice">Old Price: 100$</p>
                                 </div>
 
-                                <button className="text-[14px] font-[700] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
+                                <button className="font-[700] text-[14px] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
                             </div> 
                     </div>
                     

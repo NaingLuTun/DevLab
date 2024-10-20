@@ -1,3 +1,4 @@
+import Article from "./components/Article"
 import Comments from "./components/Comments"
 import Header from "./components/Header"
 import Nav from "./components/Nav"
@@ -14,6 +15,7 @@ function App() {
       <PopularCourses />
       <Comments />
       <Podcasts />
+      <Article />
     </>
   )
 }
