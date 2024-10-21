@@ -35,7 +35,7 @@ const Article = () => {
     ] 
 
   return (
-    <section className="p-5 pt-[70px] pb-[70px] bg-white lg:p-10 articleSection">
+    <section id="article" className="p-5 pt-[70px] pb-[70px] bg-white articleSection">
         <div className="flex justify-between items-center w-full mb-3 articleSectionHeaderContainer">
             <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Blog Articles</h2>
             <button className="seeAllBtn">See all {">"}</button>

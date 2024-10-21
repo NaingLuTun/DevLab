@@ -53,7 +53,7 @@ const Podcasts = () => {
     ]
 
   return (
-    <section className="p-5 pt-[70px] pb-[70px] lg:p-10 podcastsSection">
+    <section id="podcasts" className="p-5 pt-[70px] pb-[70px] podcastsSection">
         <div className="flex justify-between items-center w-full podcastsSectionHeaderContainer">
             <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Weekly Podcasts</h2>
             <button>See all {">"}</button>  

@@ -24,7 +24,7 @@ const PopularCourses = () => {
     ]
 
     return (
-        <section className="p-5 pt-[70px] pb-[70px] lg:p-10 popularCoursesSection">
+        <section id="popularCourses" className="p-5 pt-[70px] pb-[70px] popularCoursesSection">
             <div className="flex justify-between items-center w-full mb-3 popularCoursesHeaderContainer">
                 <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Popular Courses</h2>
                 <button className="seeAllBtn">See all {">"}</button>

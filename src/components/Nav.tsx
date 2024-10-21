@@ -12,7 +12,7 @@ const Nav = () => {
     setMenuActive(!menuActive)
   }
   return (
-    <div className="flex items-center justify-between p-3 pr-5 pl-5 bg-white border-b-[3px] border-opacity-70 lg:pl-10 lg:pr-10 navBar">
+    <div className="flex items-center justify-between p-3 pr-5 pl-5 bg-white border-b-[3px] border-opacity-70 navBar">
         <div className="flex items-center logoAndLinksContainer">
 
             <div className="relative menuContainer">

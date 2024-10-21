@@ -65,5 +65,6 @@
   html {
     font-family: "Rubik", sans-serif;
     background-color: rgb(240, 240, 240);
+    scroll-behavior: smooth;
   }
 }
