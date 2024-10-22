@@ -6,18 +6,23 @@ import Nav from "./components/Nav"
 import Podcasts from "./components/Podcasts"
 import PopularCourses from "./components/PopularCourses"
 
+import { PreviewContextProvider } from "./context/PreviewContext"
+
 
 function App() {
 
   return (
     <>
-      <Nav />
-      <Header />
-      <PopularCourses />
-      <Comments />
-      <Podcasts />
-      <Article />
-      <Footer />
+      <PreviewContextProvider>
+        <Nav />
+        <Header />
+        <PopularCourses />
+        <Comments />
+        <Podcasts />
+        <Article />
+        <Footer />
+      </PreviewContextProvider>
+      
     </>
   )
 }

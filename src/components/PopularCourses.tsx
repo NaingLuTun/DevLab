@@ -6,22 +6,86 @@ import responsiveDesignLogo from "../assets/responsive-design-logo.png"
 import phpLogo from "../assets/php-logo.svg"
 import nodejsLogo from "../assets/nodejs-logo.svg"
 
+import { PreviewContext } from "../context/PreviewContext"
+import { useContext } from "react"
+
 interface courseLogoAndHeaderType {
     logo: string,
     header: string,
     mainBgColor: string,
     discountBtnBgColor: "#91eb7c",
+    previewText: string,
 }
 
+
 const PopularCourses = () => {
+
     const courseLogoAndHeader: courseLogoAndHeaderType[] = [
-        {logo: reactLogo, header: "Learn React With Mini Projects", mainBgColor: "#015667", discountBtnBgColor: "#91eb7c"},
-        {logo: bootstrapLogo, header: "Complete Bootstrap Course", mainBgColor: "#1e025c", discountBtnBgColor: "#91eb7c"},
-        {logo: javascriptLogo, header: "100 Days Of Javascript", mainBgColor: "black", discountBtnBgColor: "#91eb7c"},
-        {logo: responsiveDesignLogo, header: "Learn Responsive Design", mainBgColor: "#f2d6d5", discountBtnBgColor: "#91eb7c"},
-        {logo: phpLogo, header: "Learn PHP With Mini Projects", mainBgColor: "#6b7cb0", discountBtnBgColor: "#91eb7c"},
-        {logo: nodejsLogo, header: "Coding Api With NodeJS", mainBgColor: "#45473c", discountBtnBgColor: "#91eb7c"}
+        {
+            logo: reactLogo, 
+            header: "Learn React With Mini Projects", 
+            mainBgColor: "#015667", 
+            discountBtnBgColor: "#91eb7c", 
+            previewText: "Boost your React skills by building hands-on mini projects designed to teach you core concepts step by step. Whether you're just starting out or looking to solidify your knowledge, these fun, bite-sized challenges will help you master React fundamentals while creating real-world applications."
+        },
+
+        {
+            logo: bootstrapLogo, 
+            header: "Complete Bootstrap Course", 
+            mainBgColor: "#1e025c", 
+            discountBtnBgColor: "#91eb7c",
+            previewText: "Master responsive web design with the Complete Bootstrap Course! Learn how to create modern, mobile-first websites using Bootstrap’s powerful grid system, components, and utilities. Whether you're a beginner or looking to enhance your front-end skills, this course will help you build professional-grade websites with ease."
+        },
+
+        {
+            logo: javascriptLogo, 
+            header: "100 Days Of Javascript", 
+            mainBgColor: "black", 
+            discountBtnBgColor: "#91eb7c",
+            previewText: "Supercharge your JavaScript skills with the 100 Days of JavaScript challenge! Each day brings a new coding exercise or project, helping you deepen your understanding of core concepts and modern JavaScript techniques. Perfect for anyone looking to go from beginner to pro, one day at a time."
+        },
+
+        {
+            logo: responsiveDesignLogo, 
+            header: "Learn Responsive Design", 
+            mainBgColor: "#f2d6d5", 
+            discountBtnBgColor: "#91eb7c",
+            previewText: "Unlock the secrets of building visually appealing, adaptable websites with Learn Responsive Design. This course will guide you through creating layouts that work seamlessly across devices of all sizes. From fluid grids to flexible media, you'll gain the skills needed to make your web designs look stunning on any screen."
+        },
+
+        {
+            logo: phpLogo, 
+            header: "Learn PHP With Mini Projects", 
+            mainBgColor: "#6b7cb0", 
+            discountBtnBgColor: "#91eb7c",
+            previewText: "Kickstart your PHP journey by building practical mini projects in Learn PHP With Mini Projects. Through hands-on coding challenges, you'll master the fundamentals of server-side programming and create dynamic web applications. Ideal for beginners looking to quickly apply their PHP knowledge in real-world scenarios."
+        },
+
+        {
+            logo: nodejsLogo, 
+            header: "Coding Api With NodeJS", 
+            mainBgColor: "#45473c", 
+            discountBtnBgColor: "#91eb7c",
+            previewText: "Discover the power of back-end development with Coding API with NodeJS. This course teaches you how to build fast, scalable APIs from scratch using Node.js and Express. Perfect for anyone looking to create robust server-side applications, handle data, and connect to front-end interfaces with ease."
+        }
     ]
+
+    const previewContext = useContext(PreviewContext)
+
+    if(!previewContext) {
+        throw new Error("PreviewContext must be used within PreviewContextProvider")
+    }
+
+    const {viewPreview, setViewPreview, setPreviewBgColor, setPreviewHeader, setPreviewImage, setPreviewText, setPreviewType} = previewContext
+
+    const handleViewCourse = (header: string, image:string, bgColor:string, text:string ) => {
+        setPreviewHeader(header)
+        setPreviewImage(image)
+        setPreviewBgColor(bgColor)
+        setPreviewText(text)
+        setPreviewType("popularCourses")
+        setViewPreview(true)
+    }
 
     return (
         <section id="popularCourses" className="p-5 pt-[70px] pb-[70px] popularCoursesSection">
@@ -34,7 +98,7 @@ const PopularCourses = () => {
                 {courseLogoAndHeader.map((course, index) => (
                     <div key={index} className="flex flex-col gap-2 individualCourseContainer">
                         
-                            <div className="p-3 rounded-2xl bg-white flex flex-col gap-2 shadow-normal lg:flex-row hover:cursor-pointer courseInfoContainer">
+                            <div onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="p-3 rounded-2xl bg-white flex flex-col gap-2 shadow-normal lg:flex-row hover:cursor-pointer courseInfoContainer">
 
                                 <div className="p-3 w-full rounded-2xl lg:w-[100px] lg:h-fit courseImgContainer" style={{backgroundColor: course.mainBgColor}}>
                                     <img src={course.logo} alt="course" className="w-full"/>
@@ -58,7 +122,7 @@ const PopularCourses = () => {
                                     <p className="text-[14px] opacity-60 line-through 2xl:text-[16px] oldPrice">Old Price: 100$</p>
                                 </div>
 
-                                <button className="font-[700] text-[14px] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
+                                <button onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="font-[700] text-[14px] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
                             </div> 
                     </div>
                     
