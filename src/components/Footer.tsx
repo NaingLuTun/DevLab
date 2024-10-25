@@ -19,7 +19,7 @@ const Footer = () => {
 
                         <li className="text-white hover:underline hover:decoration-white hover:underline-offset-2 hover:decoration-[2px] linkLists"><a href="#podcasts">Podcasts</a></li>
 
-                        <li className="text-white hover:underline hover:decoration-white hover:underline-offset-2 hover:decoration-[2px] linkLists"><a href="#article">Article</a></li>
+                        <li className="text-white hover:underline hover:decoration-white hover:underline-offset-2 hover:decoration-[2px] linkLists"><a href="#articles">Article</a></li>
                     </ul>
                 </div>
 

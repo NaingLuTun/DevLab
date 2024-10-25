@@ -2,7 +2,7 @@ import searchIcon from "../assets/search-icon.svg"
 
 const Header = () => {
   return (
-    <div className="p-5 pt-[70px] pb-[70px] flex flex-col items-center justify-center header">
+    <div id="home" className="p-5 pt-[70px] pb-[70px] flex flex-col items-center justify-center header">
         <h2 className="text-[20px] font-[700] text-nowrap lg:text-[26px]">Learn Coding Anywhere With <span className="text-[#1894c9] webName">DevLab</span></h2>
         <p className="text-[#1f307c] 2xl:text-[18px] subHeader">Learn Programming With Coach And Mentor!</p>
         

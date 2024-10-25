@@ -5,8 +5,10 @@ import Header from "./components/Header"
 import Nav from "./components/Nav"
 import Podcasts from "./components/Podcasts"
 import PopularCourses from "./components/PopularCourses"
+import PreviewDisplayer from "./components/PreviewDisplayer"
 
-import { PreviewContextProvider } from "./context/PreviewContext"
+import {PreviewContextProvider } from "./context/PreviewContext"
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Podcasts />
         <Article />
         <Footer />
+        <PreviewDisplayer />
       </PreviewContextProvider>
       
     </>

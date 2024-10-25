@@ -76,7 +76,7 @@ const PopularCourses = () => {
         throw new Error("PreviewContext must be used within PreviewContextProvider")
     }
 
-    const {viewPreview, setViewPreview, setPreviewBgColor, setPreviewHeader, setPreviewImage, setPreviewText, setPreviewType} = previewContext
+    const {setViewPreview, setPreviewBgColor, setPreviewHeader, setPreviewImage, setPreviewText, setPreviewType} = previewContext
 
     const handleViewCourse = (header: string, image:string, bgColor:string, text:string ) => {
         setPreviewHeader(header)
@@ -108,9 +108,9 @@ const PopularCourses = () => {
                                         
                                     <h3  className="text-[16px] font-[700] md:text-[18px] pb-2">{course.header}</h3>
                                         
-                                    <p className="text-[14px] opacity-60 2xl:text-[16px] info">Author: Francis Chad</p>
-                                    <p className="text-[14px] opacity-60 2xl:text-[16px] info">Duration: +13h</p>
-                                    <p className="text-[14px] opacity-60 2xl:text-[16px] info">Lifetime Support</p>
+                                    <p className="text-[14px] opacity-80 2xl:text-[16px] info">Author: Francis Chad</p>
+                                    <p className="text-[14px] opacity-80 2xl:text-[16px] info">Duration: +13h</p>
+                                    <p className="text-[14px] opacity-80 2xl:text-[16px] info">Lifetime Support</p>
                                 </div>
                                     
                             </div>
@@ -128,6 +128,7 @@ const PopularCourses = () => {
                     
                 ))}
             </div>
+
         </section>
     )
 }

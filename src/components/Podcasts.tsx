@@ -3,6 +3,7 @@ import headphoneImg from "../assets/headphone-symbol-svgrepo-com.svg"
 import playButtonImg from "../assets/play-button-svgrepo-com.svg"
 import { PreviewContext } from "../context/PreviewContext"
 
+
 interface podcastCardsType {
     bgColor: string,
     mainCardImg: string,
@@ -22,7 +23,7 @@ const Podcasts = () => {
         throw new Error("PreviewContext must be used within PreviewContextProvider")
     }
 
-    const {viewPreview, setViewPreview, setPreviewBgColor, setPreviewHeader, setPreviewImage, setPreviewText, setPreviewType, setPreviewCategorisation, setPreviewDate, setPreviewDuration, setPreviewNumberOfListeners} = previewContext
+    const { setViewPreview, setPreviewBgColor, setPreviewHeader, setPreviewImage, setPreviewText, setPreviewType, setPreviewCategorisation, setPreviewDate, setPreviewDuration , setPreviewNumberOfListeners} = previewContext
 
     const podcastCards: podcastCardsType[] = [
         {
@@ -91,7 +92,7 @@ const Podcasts = () => {
 
             {podcastCards.map((card, index) => (
                 <div key={index} className="flex flex-col gap-2 individualPodcastCardsContainer">
-                    <div onClick={() => handleViewPodcast(card.cardTitle, card.bgColor, card.mainCardImg, card.previewText, card.categorisation, card.date, card.duration, card.numberOfLitsteners)} className="p-3 bg-white rounded-2xl shadow-normal hover:cursor-pointer lg:flex lg:items-center lg:gap-3 podcastMainInfoContainer">
+                    <div onClick={() => handleViewPodcast(card.cardTitle, card.mainCardImg, card.bgColor, card.previewText, card.categorisation, card.date, card.duration, card.numberOfLitsteners)} className="p-3 bg-white rounded-2xl shadow-normal hover:cursor-pointer lg:flex lg:items-center lg:gap-3 podcastMainInfoContainer">
                         <div style={{backgroundColor: card.bgColor}} className="p-2 flex justify-center items-center rounded-2xl mb-3 lg:mb-0 podcastCardImgContainer">
                             <img src={headphoneImg} alt="podcast" className="w-[50px]" />
                         </div>
@@ -111,14 +112,19 @@ const Podcasts = () => {
                             <span>{card.duration}</span>
                         </div>
 
-                        <button onClick={() => handleViewPodcast(card.cardTitle, card.bgColor, card.mainCardImg, card.previewText, card.categorisation, card.date, card.duration, card.numberOfLitsteners)} className="border-none bg-[#91eb7c] text-[#294b5e] font-[700] p-2 rounded-2xl w-full hover:shadow-lg lg:w-[200px]">+{card.numberOfLitsteners} Listeners</button>
+                        <button onClick={() => handleViewPodcast(card.cardTitle, card.mainCardImg, card.bgColor, card.previewText, card.categorisation, card.date, card.duration, card.numberOfLitsteners)} className="border-none bg-[#91eb7c] text-[#294b5e] font-[700] p-2 rounded-2xl w-full hover:shadow-lg lg:w-[200px]">+{card.numberOfLitsteners} Listeners</button>
                     </div>
+
                 </div>
+
+                
             ))
 
             }
 
         </div>
+
+        
         
     </section>
   )

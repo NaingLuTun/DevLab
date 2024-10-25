@@ -59,6 +59,13 @@
   :is(.active) .menuIcon::after {
     transform: rotate(-45deg);
   }
+
+/*   .modalMainContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
 }
 
 @layer base {

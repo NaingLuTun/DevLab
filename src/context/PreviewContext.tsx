@@ -21,7 +21,7 @@ interface PreviewContextType {
     setPreviewCategorisation: React.Dispatch<React.SetStateAction<string | null>>,
     previewDuration: string | null,
     setPreviewDuration: React.Dispatch<React.SetStateAction<string | null>>,
-    previewNumberOfListener: number | null,
+    previewNumberOfListeners: number | null,
     setPreviewNumberOfListeners: React.Dispatch<React.SetStateAction<number | null>>
 }
 
@@ -66,7 +66,7 @@ const PreviewContextProvider = ({children}: PreviewContextProviderPropType) => {
         setPreviewCategorisation: setPreviewCategorisation,
         previewDuration: previewDuration,
         setPreviewDuration: setPreviewDuration,
-        previewNumberOfListener: previewNumberOfListeners,
+        previewNumberOfListeners: previewNumberOfListeners,
         setPreviewNumberOfListeners: setPreviewNumberOfListeners
     }
   return (
