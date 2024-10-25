@@ -98,7 +98,7 @@ const PopularCourses = () => {
                 {courseLogoAndHeader.map((course, index) => (
                     <div key={index} className="flex flex-col bg-white shadow-normal rounded-2xl individualCourseContainer">
                         
-                            <div onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="p-3 flex flex-col gap-2  lg:flex-row hover:cursor-pointer courseInfoContainer">
+                            <div onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="p-3 flex flex-col gap-2 lg:gap-4 lg:flex-row hover:cursor-pointer courseInfoContainer">
 
                                 <div className="p-3 w-full rounded-2xl lg:w-[100px] lg:h-fit courseImgContainer" style={{backgroundColor: course.mainBgColor}}>
                                     <img src={course.logo} alt="course" className="w-full"/>
