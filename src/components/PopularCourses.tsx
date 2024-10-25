@@ -96,9 +96,9 @@ const PopularCourses = () => {
             
             <div className="grid grid-cols-2 p-3 gap-4 md:gap-5 md:p-5 lg:grid-cols-3 popularCoursesContainer">
                 {courseLogoAndHeader.map((course, index) => (
-                    <div key={index} className="flex flex-col gap-2 individualCourseContainer">
+                    <div key={index} className="flex flex-col bg-white shadow-normal rounded-2xl individualCourseContainer">
                         
-                            <div onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="p-3 rounded-2xl bg-white flex flex-col gap-2 shadow-normal lg:flex-row hover:cursor-pointer courseInfoContainer">
+                            <div onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="p-3 flex flex-col gap-2  lg:flex-row hover:cursor-pointer courseInfoContainer">
 
                                 <div className="p-3 w-full rounded-2xl lg:w-[100px] lg:h-fit courseImgContainer" style={{backgroundColor: course.mainBgColor}}>
                                     <img src={course.logo} alt="course" className="w-full"/>
@@ -106,23 +106,23 @@ const PopularCourses = () => {
 
                                 <div className="flex-grow courseInfoContainer">
                                         
-                                    <h3  className="text-[16px] font-[700] md:text-[18px] pb-2">{course.header}</h3>
+                                    <h3  className="text-[16px] font-[700] md:text-[18px] pb-2 text-center lg:text-left">{course.header}</h3>
                                         
-                                    <p className="text-[14px] opacity-80 2xl:text-[16px] info">Author: Francis Chad</p>
-                                    <p className="text-[14px] opacity-80 2xl:text-[16px] info">Duration: +13h</p>
-                                    <p className="text-[14px] opacity-80 2xl:text-[16px] info">Lifetime Support</p>
+                                    <p className="text-[14px] opacity-80 2xl:text-[16px] text-center lg:text-left info">Author: Francis Chad</p>
+                                    <p className="text-[14px] opacity-80 2xl:text-[16px] text-center lg:text-left info">Duration: +13h</p>
+                                    <p className="text-[14px] opacity-80 2xl:text-[16px] text-center lg:text-left info">Lifetime Support</p>
                                 </div>
                                     
                             </div>
                                 
 
-                            <div className="p-3 rounded-2xl shadow-normal lg:flex lg:justify-between bg-white text-center coursePriceContainer">
+                            <div className="p-3 lg:flex lg:justify-between text-center lg:items-center lg:pr-5 lg:pl-9 coursePriceContainer">
                                 <div className="priceContainer">
-                                    <h3 className="text-[16px] font-[700] md:text-[18px] price">Price: 80$</h3>
-                                    <p className="text-[14px] opacity-60 line-through 2xl:text-[16px] oldPrice">Old Price: 100$</p>
+                                    <h3 className="text-[24px] font-[700] md:text-[26px] price">80$</h3>
+                                    <p className="text-[14px] opacity-60 line-through 2xl:text-[16px] oldPrice"> 100$</p>
                                 </div>
 
-                                <button onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="font-[700] text-[14px] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[30px] lg:mt-0 lg:pr-[30px] rounded-2xl mt-3 2xl:text-[16px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>20% Discount</button>
+                                <button onClick={() => handleViewCourse(course.header, course.logo, course.mainBgColor, course.previewText)} className="font-[700] text-[14px] text-[#294b5e] p-2 w-full lg:w-fit lg:pl-[70px] lg:mt-0 lg:pr-[70px] rounded-2xl mt-3 2xl:text-[16px] lg:max-h-[40px] hover:shadow-lg discountBtn" style={{backgroundColor: course.discountBtnBgColor}}>Buy</button>
                             </div> 
                     </div>
                     

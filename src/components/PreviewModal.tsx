@@ -2,7 +2,7 @@ import { useContext } from "react"
 import "../global.css"
 import { PreviewContext } from "../context/PreviewContext"
 
-import closeModalBtnIcon from "../assets/white-cross-icon.svg"
+import closeModalBtnIcon from "../assets/cross-circle-icon.svg"
 import playBtnIcon from "../assets/play-button-svgrepo-com.svg"
 
 interface PreviewModalPropsType {
@@ -31,19 +31,18 @@ const PreviewModal = ({previewHeader, previewImage, previewText, previewType, pr
   return (
     <section className="fixed flex justify-center items-center p-5 w-[100%] h-[100%] top-0 left-0 z-50 bg-[#1d1c1c59] modal">
 
-        <button onClick={() => setViewPreview(false)} className="absolute top-5 right-5">
-          <img src={closeModalBtnIcon} alt="close" className="w-[50px]" />
-        </button>
-
-        {/* {previewDate && <button onClick={() => console.log(previewDate)} className="text-[40px] text-white absolute top-2 z-[100]">{previewDate}</button>} */}
-        {/* {previewCategorisation && <button onClick={() => console.log(previewCategorisation)} className="text-[40px] text-white absolute top-2 z-[100]">{previewCategorisation}</button>} */}
+        
 
         <div className="bg-white flex flex-col w-full rounded-3xl lg:flex-row lg:mr-[150px] lg:ml-[150px] modalMainContainer">
 
             {previewBgColor && previewImage?
-            <div className="w-full flex justify-center items-center rounded-t-3xl p-10 lg:rounded-l-3xl lg:rounded-t-none lg:rounded-tl-3xl modalImageContainer" 
+            <div className="w-full flex justify-center items-center rounded-t-3xl p-10 xs:relative lg:rounded-l-3xl lg:rounded-t-none lg:rounded-tl-3xl modalImageContainer" 
             style={{backgroundColor: previewBgColor}}>
               <img src={previewImage} alt="article image" className="w-[100px]" />
+
+              <button onClick={() => setViewPreview(false)} className="absolute top-2 right-2">
+                <img src={closeModalBtnIcon} alt="close" className="w-[50px]" />
+              </button>
             </div>
             : null}
 
@@ -62,7 +61,7 @@ const PreviewModal = ({previewHeader, previewImage, previewText, previewType, pr
 
                     <div className="flex justify-between items-center mt-5 previewFooter">
                       <p className="text-[16px] font-[700] md:text-[18px]">Price: 80$</p>
-                      <button className="border-none bg-[#91eb7c] text-[#294b5e] font-[700] p-3 rounded-2xl hover:shadow-lg">20% Discount</button>
+                      <button className="border-none bg-[#91eb7c] text-[#294b5e] font-[700] p-3 pr-[50px] pl-[50px] rounded-2xl hover:shadow-lg">Buy</button>
                     </div>
                   </div>
 

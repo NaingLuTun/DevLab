@@ -91,8 +91,8 @@ const Podcasts = () => {
         <div className="grid grid-cols-2 p-3 gap-4 md:p-5  podcastsCardsContainer">
 
             {podcastCards.map((card, index) => (
-                <div key={index} className="flex flex-col gap-2 individualPodcastCardsContainer">
-                    <div onClick={() => handleViewPodcast(card.cardTitle, card.mainCardImg, card.bgColor, card.previewText, card.categorisation, card.date, card.duration, card.numberOfLitsteners)} className="p-3 bg-white rounded-2xl shadow-normal hover:cursor-pointer lg:flex lg:items-center lg:gap-3 podcastMainInfoContainer">
+                <div key={index} className="flex flex-col bg-white shadow-normal rounded-2xl xs:text-center  individualPodcastCardsContainer">
+                    <div onClick={() => handleViewPodcast(card.cardTitle, card.mainCardImg, card.bgColor, card.previewText, card.categorisation, card.date, card.duration, card.numberOfLitsteners)} className="p-3 bg-white rounded-t-2xl  hover:cursor-pointer lg:flex lg:items-center lg:gap-3 podcastMainInfoContainer">
                         <div style={{backgroundColor: card.bgColor}} className="p-2 flex justify-center items-center rounded-2xl mb-3 lg:mb-0 podcastCardImgContainer">
                             <img src={headphoneImg} alt="podcast" className="w-[50px]" />
                         </div>
@@ -106,8 +106,8 @@ const Podcasts = () => {
                         
                     </div>
 
-                    <div className="p-3 bg-white rounded-2xl w-full shadow-normal lg:flex podcastDurationAndListenersContainer">
-                        <div className="flex items-center w-full mb-2 gap-2 lg:mb-0 displayDurationContainer">
+                    <div className="p-3 bg-white rounded-b-2xl w-full lg:flex podcastDurationAndListenersContainer">
+                        <div className="flex items-center w-full mb-2 gap-2 xs:justify-center lg:mb-0 displayDurationContainer">
                             <img src={playButtonImg} alt="play" className="w-[16px] md:w-[18px] lg:w-[20px]" />
                             <span>{card.duration}</span>
                         </div>
